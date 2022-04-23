@@ -12,7 +12,7 @@
 }
 
 body {
-  min-width: 390px; 
+  min-width: 390px;
   position: relative;
   padding-top: 80px; /*För att fixed-top i navbar ska lägga sig rätt i förhållande till section 1*/
 }
@@ -101,13 +101,13 @@ nav {
         color: $lightcolor;
         transition: all 0.4s; /*Styr hastigheten på faden till hover*/
       }
-      /*Stylar aktivt navitem för scrollspy*/
       a.active {
+        /*Stylar aktivt navitem för scrollspy*/
         color: $maincolor;
         background-color: $goldcolor;
       }
-      /*Vid hover över aktivt navitem så växer paddingen*/
       a.nav-link.active:hover {
+        /*Vid hover över aktivt navitem så växer paddingen*/
         padding: 0.1em 0.8em;
         margin: -0.1em -0.3em; /*-0.1em och -0.3em för att raden inte ska skjutas på av paddingen*/
       }
@@ -165,7 +165,10 @@ nav {
     color: $goldcolor;
   }
   .box {
-    background-color: rgba($maincolor, 0.8); /*Faderar boxen så bakgrunden syns*/
+    background-color: rgba(
+      $maincolor,
+      0.8
+    ); /*Faderar boxen så bakgrunden syns*/
     border-radius: 1em;
   }
 }
@@ -190,14 +193,17 @@ nav {
     h1.text-center.p-5 {
       display: none;
     }
-    p{
+    p {
       color: dimgrey;
     }
   }
 }
 /********SECTION 3 START********/
 #section3 {
-  background: linear-gradient(rgb($lightcolor, 0.1), $maincolor); /*fadear bakgrundsfärgen*/
+  background: linear-gradient(
+    rgb($lightcolor, 0.1),
+    $maincolor
+  ); /*fadear bakgrundsfärgen*/
   width: 100%;
   h5,
   h1,
@@ -215,7 +221,9 @@ nav {
       transition: transform 0.2s;
     }
     .round-img:hover {
-      transform: scale(1.2); //ökar storleken på bilden när man hovrar över den till 1.2 av storleken
+      transform: scale(
+        1.2
+      ); //ökar storleken på bilden när man hovrar över den till 1.2 av storleken
     }
   }
 }
@@ -260,7 +268,8 @@ nav {
       color: $goldcolor;
     }
   }
-  [class|="fab fa-facebook"] { /*stylear elementet med klassen fab fa-facebook*/
+  [class|="fab fa-facebook"] {
+    /*stylear elementet med klassen fab fa-facebook*/
     color: $facebook;
   }
   [class|="fab fa-twitter"] {
@@ -280,7 +289,7 @@ nav {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    &:after { 
+    &:after {
       content: "";
       position: absolute;
       bottom: 0;
@@ -420,8 +429,8 @@ nav {
   }
 }
 @media screen and (min-width: 992px) {
-  body{
-    padding-top: 60px; 
+  body {
+    padding-top: 60px;
   }
   /*******NAV START********/
   nav {
@@ -432,7 +441,7 @@ nav {
         padding-left: 3em;
         flex-direction: row;
       }
-      img{
+      img {
         margin-left: 1.5em;
       }
     }

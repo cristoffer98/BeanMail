@@ -144,10 +144,6 @@ nav .container-fluid {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-nav .container-fluid .navbar-nav .nav-item {
-  /*Stylar aktivt navitem för scrollspy*/
-  /*Vid hover över aktivt navitem så växer paddingen*/
-}
 nav .container-fluid .navbar-nav .nav-item a:link,
 nav .container-fluid .navbar-nav .nav-item a:visited,
 nav .container-fluid .navbar-nav .nav-item a:active {
@@ -162,10 +158,12 @@ nav .container-fluid .navbar-nav .nav-item a:hover {
   /*Styr hastigheten på faden till hover*/
 }
 nav .container-fluid .navbar-nav .nav-item a.active {
+  /*Stylar aktivt navitem för scrollspy*/
   color: #654a4a;
   background-color: #c8c39d;
 }
 nav .container-fluid .navbar-nav .nav-item a.nav-link.active:hover {
+  /*Vid hover över aktivt navitem så växer paddingen*/
   padding: 0.1em 0.8em;
   margin: -0.1em -0.3em;
   /*-0.1em och -0.3em för att raden inte ska skjutas på av paddingen*/
