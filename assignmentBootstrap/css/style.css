@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*Import av färger från colors.scss*/
+/*Imports av fonter*/
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
@@ -19,21 +21,12 @@ body {
 h1,
 h5,
 h3,
-a {
+a,
+button.btn {
   font-family: "Noto Sans", sans-serif;
 }
 
-button.btn {
-  font-family: "Catamaran", sans-serif;
-}
-
-button {
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-}
-
+/*Förstorar bilden när man hovrar över den.*/
 button:hover {
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
@@ -79,6 +72,7 @@ p {
   opacity: 1;
 }
 
+/*Bestämmer hastigheten på animationen*/
 .active.fade-left {
   -webkit-animation: fade-left 500ms ease-in;
           animation: fade-left 500ms ease-in;
@@ -89,7 +83,7 @@ p {
           animation: fade-bottom 500ms ease-in;
 }
 
-/****keyframes******/
+/****keyframes eller waypoints över animationerna******/
 @-webkit-keyframes fade-left {
   0% {
     -webkit-transform: translateX(-100px);
@@ -150,22 +144,26 @@ nav .container-fluid {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+nav .container-fluid .navbar-nav .nav-item {
+  /*Stylar aktivt navitem för scrollspy*/
+  /*Vid hover över aktivt navitem så växer paddingen*/
+}
 nav .container-fluid .navbar-nav .nav-item a:link,
 nav .container-fluid .navbar-nav .nav-item a:visited,
 nav .container-fluid .navbar-nav .nav-item a:active {
-  color: #c9c49e;
+  color: #c8c39d;
   font-size: 1.2em;
   padding: 0 10px 0 10px;
 }
 nav .container-fluid .navbar-nav .nav-item a:hover {
-  color: white;
+  color: #ffffff;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   /*Styr hastigheten på faden till hover*/
 }
 nav .container-fluid .navbar-nav .nav-item a.active {
   color: #654a4a;
-  background-color: #c9c49e;
+  background-color: #c8c39d;
 }
 nav .container-fluid .navbar-nav .nav-item a.nav-link.active:hover {
   padding: 0.1em 0.8em;
@@ -187,7 +185,7 @@ nav .container-fluid img {
 }
 
 .active-color {
-  color: #c9c49e;
+  color: #c8c39d;
 }
 
 .scroll-color {
@@ -195,10 +193,10 @@ nav .container-fluid img {
 }
 
 .navbar.navbar-expand.navbar-dark .link-color {
-  color: #c9c49e;
+  color: #c8c39d;
 }
 .navbar.navbar-expand.navbar-dark .link-color:hover {
-  color: white;
+  color: #ffffff;
 }
 .navbar.navbar-expand.navbar-dark .colors {
   color: #654a4a;
@@ -208,23 +206,25 @@ nav .container-fluid img {
 #section1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(122, 125, 100, 0.112)), to(rgba(255, 255, 255, 0.7))), url(../images/coffeebeans.jpeg);
   background-image: linear-gradient(rgba(122, 125, 100, 0.112), rgba(255, 255, 255, 0.7)), url(../images/coffeebeans.jpeg);
+  /*Sätter bakgrundsbild och justerar färgen med linear gradient så den smält ihop med nästa sektion*/
   background-position: center;
   background-size: cover;
   height: auto;
   width: 100%;
 }
 #section1 .btn {
-  background-color: white;
+  background-color: #ffffff;
 }
 #section1 .btn:hover {
-  background-color: #c9c49e;
-  color: white;
+  background-color: #c8c39d;
+  color: #ffffff;
 }
 #section1 h5 {
-  color: #c9c49e;
+  color: #c8c39d;
 }
 #section1 .box {
   background-color: rgba(101, 74, 74, 0.8);
+  /*Faderar boxen så bakgrunden syns*/
   border-radius: 1em;
 }
 
@@ -232,7 +232,7 @@ nav .container-fluid img {
 #section2 {
   width: 100%;
   height: auto;
-  /*SÃ¤tter bredden pÃ¥ divarna med klasserna p-5 row som fÃ¶rÃ¤lder*/
+  /*Sätter bredden på barnen med klasserna p-5 och row som förälder*/
 }
 #section2 .border-right {
   border-right: 1px solid #654a4a;
@@ -257,6 +257,7 @@ nav .container-fluid img {
 #section3 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(#654a4a));
   background: linear-gradient(rgba(255, 255, 255, 0.1), #654a4a);
+  /*fadear bakgrundsfärgen*/
   width: 100%;
 }
 #section3 h5,
@@ -264,19 +265,11 @@ nav .container-fluid img {
 #section3 p {
   color: #654a4a;
 }
-#section3 button {
-  border-color: #654a4a;
-}
-#section3 button:hover {
-  background-color: #c9c49e;
-  color: black;
-  border-color: #c9c49e;
-}
 #section3 .double-img {
   width: 100%;
 }
 #section3 .double-img h5 {
-  color: #c9c49e;
+  color: #c8c39d;
 }
 #section3 .double-img .round-img {
   width: 25%;
@@ -295,19 +288,20 @@ nav .container-fluid img {
 #section4 {
   background-color: #654a4a;
   width: 100%;
-  /***Källa: https://webdeasy.de/en/top-css-buttons-en/ Author: alticreation;****/
+  /***Källa rad 274-309: https://webdeasy.de/en/top-css-buttons-en/ Author: alticreation;****/
 }
 #section4 div:first-child p {
   padding-bottom: 2em;
 }
 #section4 .border-bottom p {
-  color: white;
+  color: #ffffff;
 }
 #section4 div.p-5.d-flex.justify-content-center {
   max-width: 1200px;
 }
 #section4 .footer-col {
   padding: 0 2em;
+  /*padding i x-led på divarna*/
   width: 80%;
   margin: 0 auto;
 }
@@ -316,23 +310,25 @@ nav .container-fluid img {
 }
 #section4 .footer-col:last-child {
   padding-top: 1em;
+  /*justerar avståndet till bordern för att få samma avstånd som first:child*/
 }
 #section4 h1,
 #section4 .row h5 {
-  color: #c9c49e;
+  color: #c8c39d;
 }
 #section4 .row li {
   list-style-type: none;
-  color: white;
+  color: #ffffff;
 }
 #section4 .row a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 #section4 .row a:hover {
-  color: #c9c49e;
+  color: #c8c39d;
 }
 #section4 [class|="fab fa-facebook"] {
+  /*stylear elementet med klassen fab fa-facebook*/
   color: #3b5998;
 }
 #section4 [class|="fab fa-twitter"] {
@@ -360,7 +356,7 @@ nav .container-fluid img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 2rem;
   z-index: -2;
 }
@@ -371,14 +367,14 @@ nav .container-fluid img {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #c9c49e;
+  background-color: #c8c39d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border-radius: 2rem;
   z-index: -1;
 }
 #section4 .button:hover {
-  color: white;
+  color: #ffffff;
 }
 #section4 .button:hover:before {
   width: 100%;
@@ -392,7 +388,7 @@ nav .container-fluid img {
 
   /********NAV START*******/
   nav {
-    background-color: white;
+    background-color: #ffffff;
   }
   nav .container-fluid {
     -webkit-box-orient: vertical;
@@ -411,10 +407,10 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     color: #654a4a;
   }
   nav .container-fluid .navbar-nav .nav-item a:hover {
-    color: #c9c49e;
+    color: #c8c39d;
   }
   nav .container-fluid .navbar-nav .nav-item a.active {
-    color: white;
+    color: #ffffff;
   }
   nav .container-fluid #logo-nav {
     width: 3em;
@@ -426,6 +422,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
   nav .container-fluid img {
     width: 6em;
     margin-left: -2.5em;
+    /*för att få loggan någolunda centrerat*/
   }
 
   #section1 {
@@ -436,11 +433,11 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     text-align: center;
   }
   #section1 .box .btn {
-    color: white;
+    color: #ffffff;
     background-color: #654a4a;
   }
   #section1 .box .btn:hover {
-    background-color: #c9c49e;
+    background-color: #c8c39d;
   }
 
   /********SECTION 2***********/
@@ -489,7 +486,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
   }
   #section4 .footer-col:first-child {
     border-bottom: none;
-    border-right: 1px solid white;
+    border-right: 1px solid #ffffff;
   }
   #section4 .footer-col:last-child {
     padding-top: 0em;
@@ -535,6 +532,8 @@ nav .container-fluid .navbar-nav .nav-item a:active {
   }
   #section1 .first-sec-container .fp-images {
     width: 35%;
+    /*containerns storlek i förhållande till syskonet first-page-box*
+    /*inspiration till kod inom .fp-img1, .fp-img2, .fp-img3, - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade*/
   }
   #section1 .first-sec-container .fp-images .fp-img1 {
     width: 40%;
@@ -564,7 +563,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     background-color: #654a4a;
   }
   #section1 .first-sec-container .fp-images .fp-img1 .fp1-container .overlay1 h5 {
-    color: white;
+    color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -600,7 +599,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     opacity: 0;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
-    background-color: white;
+    background-color: #ffffff;
   }
   #section1 .first-sec-container .fp-images .fp-img2 .fp2-container .overlay2 h5 {
     color: #654a4a;
@@ -664,11 +663,13 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     position: relative;
     -webkit-transform: translate(13%, 25%);
             transform: translate(13%, 25%);
+    /*13% på Xaxeln för att boxen ska ligga i kant med skärmens högersida*/
   }
   #section1 .first-sec-container .first-page-box .box {
     text-align: left;
-    background-image: -webkit-gradient(linear, right top, left top, from(white), to(#fff3e4));
-    background-image: linear-gradient(to left, white, #fff3e4);
+    background-image: -webkit-gradient(linear, right top, left top, from(#ffffff), to(#fff3e4));
+    background-image: linear-gradient(to left, #ffffff, #fff3e4);
+    /*fadear boxen för att den ska smälta in i bakgrunden*/
     border-radius: 1em 0 0 1em;
   }
   #section1 .first-sec-container .first-page-box .box .contentbox {
@@ -680,7 +681,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     color: #654a4a;
   }
   #section1 h5 {
-    color: #c9c49e;
+    color: #c8c39d;
   }
 
   /*******SECTION 2 START********/
@@ -688,7 +689,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     padding-bottom: 5em;
   }
   #section2 .header.p-2 h5 {
-    color: #c9c49e;
+    color: #c8c39d;
   }
   #section2 .container {
     max-width: 1200px;
@@ -742,7 +743,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     /*För att bilden inte ska försvinna för mycket från section 4*/
   }
   #section3 h5 {
-    color: #c9c49e;
+    color: #c8c39d;
   }
   #section3 .cont {
     display: -webkit-box;
@@ -776,7 +777,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     display: block;
   }
   #section4 .border-bottom p {
-    color: white;
+    color: #ffffff;
   }
   #section4 div.text-center.p-5 {
     width: 50%;
@@ -797,7 +798,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     background-color: #654a4a;
   }
   #section4 h5 {
-    color: #c9c49e;
+    color: #c8c39d;
   }
 }
 @media screen and (min-width: 1100px) {

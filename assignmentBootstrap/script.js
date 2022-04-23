@@ -26,7 +26,8 @@ $(document).ready(function () {
       }
     });
   });
-  /*Källa: https://stackoverflow.com/questions/48141740/nav-bar-scrolling-too-far-on-my-page*/
+  /*Källa rad 31-39: https://stackoverflow.com/questions/48141740/nav-bar-scrolling-too-far-on-my-page*/
+  /*När man klickar på ett navitem så ska navbaren stanna på rätt ställe. Med position fixed på navbaren så justerar jag navbarens avstånde till sektionen*/
   $(".navbar a").click(function (e) {
     e.preventDefault();
     var scrollToId = $(this.getAttribute("href"));
@@ -34,9 +35,10 @@ $(document).ready(function () {
       .stop(true)
       .animate({
         scrollTop: scrollToId.position().top - $(".navbar").height(),
-      });
+      }); /*Vald sektion minus navbarens storlek för att få rätt avstånd*/
   });
-  /*****Källa: https://alvarotrigo.com/blog/css-animations-scroll *****/
+  /*För att justera när animationen ska visas, dvs när den ska aktiveras när man befinner sig över sektionen*/
+  /*****Källa rad 42-56: https://alvarotrigo.com/blog/css-animations-scroll *****/
   $(".navbar-default").removeClass("slideIn");
   function reveal() {
     var reveals = $(".reveal");
@@ -51,16 +53,16 @@ $(document).ready(function () {
       }
     }
   }
-  window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", reveal); /*Vid eventet scroll kallar jag på funktionen reveal*/
 
   /*bestämmer hur modal ska bete sig när man trycker på buy eller close */
   $(".modal-footer .buy").click(function () {
     var input = $("input[type=email]");
-    if (input.val().length === 0) {
+    if (input.val().length === 0) { /*Om fältet är tomt när man klickar buy så visas ett felmeddelande*/
       input.css("border-color", "red");
       input.attr("placeholder", "required area");
     }
-    if (input.val().length !== 0) {
+    if (input.val().length !== 0) { /*Om eventet är tomt så återställer jag fäletets borderfärg och tömmer innehållet samt visar ett meddelande*/
       input.css("border-color", "lightgrey");
       input.val("");
       input.attr("placeholder", "coffee@beanmail.com");
