@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -33,7 +33,7 @@ button:hover {
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 p {
@@ -60,7 +60,7 @@ p {
 .reveal {
   position: relative;
   -webkit-transform: translateY(50px);
-  transform: translateY(50px);
+          transform: translateY(50px);
   opacity: 0;
   -webkit-transition: 500ms all ease-in;
   transition: 500ms all ease-in;
@@ -68,67 +68,67 @@ p {
 
 .reveal.active {
   -webkit-transform: translateY(0);
-  transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 
 /*Bestämmer hastigheten på animationen*/
 .active.fade-left {
   -webkit-animation: fade-left 500ms ease-in;
-  animation: fade-left 500ms ease-in;
+          animation: fade-left 500ms ease-in;
 }
 
 .active.fade-bottom {
   -webkit-animation: fade-bottom 500ms ease-in;
-  animation: fade-bottom 500ms ease-in;
+          animation: fade-bottom 500ms ease-in;
 }
 
 /****keyframes eller waypoints över animationerna******/
 @-webkit-keyframes fade-left {
   0% {
     -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
 @keyframes fade-left {
   0% {
     -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
 @-webkit-keyframes fade-bottom {
   0% {
     -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+            transform: translateY(50px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes fade-bottom {
   0% {
     -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+            transform: translateY(50px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -141,8 +141,8 @@ nav .container-fluid {
   max-width: 1200px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 nav .container-fluid .navbar-nav .nav-item a:link,
 nav .container-fluid .navbar-nav .nav-item a:visited,
@@ -202,19 +202,8 @@ nav .container-fluid img {
 
 /*********Section 1 start*********/
 #section1 {
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(122, 125, 100, 0.112)),
-      to(rgba(255, 255, 255, 0.7))
-    ),
-    url(../images/coffeebeans.jpeg);
-  background-image: linear-gradient(
-      rgba(122, 125, 100, 0.112),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url(../images/coffeebeans.jpeg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(122, 125, 100, 0.112)), to(rgba(255, 255, 255, 0.7))), url(../images/coffeebeans.jpeg);
+  background-image: linear-gradient(rgba(122, 125, 100, 0.112), rgba(255, 255, 255, 0.7)), url(../images/coffeebeans.jpeg);
   /*Sätter bakgrundsbild och justerar färgen med linear gradient så den smält ihop med nästa sektion*/
   background-position: center;
   background-size: cover;
@@ -262,16 +251,13 @@ nav .container-fluid img {
 #section2 .p-5.row p {
   color: dimgrey;
 }
+#section2 .p-5.row .gold-color {
+  color: #c8c39d;
+}
 
 /********SECTION 3 START********/
 #section3 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(255, 255, 255, 0.1)),
-    to(#654a4a)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(#654a4a));
   background: linear-gradient(rgba(255, 255, 255, 0.1), #654a4a);
   /*fadear bakgrundsfärgen*/
   width: 100%;
@@ -297,7 +283,7 @@ nav .container-fluid img {
 }
 #section3 .double-img .round-img:hover {
   -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /****SECTION 4*********/
@@ -415,8 +401,8 @@ nav .container-fluid img {
     padding: 0 10px 0 10px;
   }
   nav .container-fluid .navbar-nav .nav-item a:link,
-  nav .container-fluid .navbar-nav .nav-item a:visited,
-  nav .container-fluid .navbar-nav .nav-item a:active {
+nav .container-fluid .navbar-nav .nav-item a:visited,
+nav .container-fluid .navbar-nav .nav-item a:active {
     color: #654a4a;
   }
   nav .container-fluid .navbar-nav .nav-item a:hover {
@@ -440,19 +426,8 @@ nav .container-fluid img {
 
   /*******SECTION 1*********/
   #section1 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(122, 125, 100, 0)),
-        to(rgba(255, 255, 255, 0.4))
-      ),
-      url(../images/coffeebeans.jpeg);
-    background-image: linear-gradient(
-        rgba(122, 125, 100, 0),
-        rgba(255, 255, 255, 0.4)
-      ),
-      url(../images/coffeebeans.jpeg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(122, 125, 100, 0)), to(rgba(255, 255, 255, 0.4))), url(../images/coffeebeans.jpeg);
+    background-image: linear-gradient(rgba(122, 125, 100, 0), rgba(255, 255, 255, 0.4)), url(../images/coffeebeans.jpeg);
   }
   #section1 .box {
     text-align: center;
@@ -466,8 +441,8 @@ nav .container-fluid img {
   #section2 .container .p-5.row div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     /*Lägger divarna i en kolumn istället för på rad*/
     width: 100%;
     text-align: center;
@@ -512,16 +487,16 @@ nav .container-fluid img {
   nav .container-fluid {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin: 0 auto;
   }
   nav .container-fluid .nav-item {
     padding-left: 3em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   nav .container-fluid img {
     margin-left: 1.5em;
@@ -538,7 +513,7 @@ nav .container-fluid img {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #section1 .first-sec-container .fp-images {
     width: 35%;
@@ -548,7 +523,7 @@ nav .container-fluid img {
   #section1 .first-sec-container .fp-images .fp-img1 {
     width: 40%;
     -webkit-transform: translate(200%, 30%);
-    transform: translate(200%, 30%);
+            transform: translate(200%, 30%);
     /*Justerar position för de runda bilderna*/
   }
   #section1 .first-sec-container .fp-images .fp-img1 .fp1-container {
@@ -574,35 +549,24 @@ nav .container-fluid img {
     transition: 0.2s ease;
     background-color: #654a4a;
   }
-  #section1
-    .first-sec-container
-    .fp-images
-    .fp-img1
-    .fp1-container
-    .overlay1
-    h5 {
+  #section1 .first-sec-container .fp-images .fp-img1 .fp1-container .overlay1 h5 {
     /*Centrerar h5*/
     color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     text-align: center;
   }
-  #section1
-    .first-sec-container
-    .fp-images
-    .fp-img1
-    .fp1-container:hover
-    .overlay1 {
+  #section1 .first-sec-container .fp-images .fp-img1 .fp1-container:hover .overlay1 {
     /*Vid hover så sätter jag overlay1's opacity till 1 -dvs visar fältet*/
     opacity: 1;
   }
   #section1 .first-sec-container .fp-images .fp-img2 {
     width: 50%;
     -webkit-transform: translate(80%, 30%);
-    transform: translate(80%, 30%);
+            transform: translate(80%, 30%);
   }
   #section1 .first-sec-container .fp-images .fp-img2 .fp2-container {
     position: relative;
@@ -626,34 +590,23 @@ nav .container-fluid img {
     transition: 0.2s ease;
     background-color: #ffffff;
   }
-  #section1
-    .first-sec-container
-    .fp-images
-    .fp-img2
-    .fp2-container
-    .overlay2
-    h5 {
+  #section1 .first-sec-container .fp-images .fp-img2 .fp2-container .overlay2 h5 {
     color: #654a4a;
     position: absolute;
     font-size: 2.5em;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     text-align: center;
   }
-  #section1
-    .first-sec-container
-    .fp-images
-    .fp-img2
-    .fp2-container:hover
-    .overlay2 {
+  #section1 .first-sec-container .fp-images .fp-img2 .fp2-container:hover .overlay2 {
     opacity: 1;
   }
   #section1 .first-sec-container .fp-img3 {
     width: 65%;
     -webkit-transform: translate(80%, 35%);
-    transform: translate(80%, 35%);
+            transform: translate(80%, 35%);
     position: relative;
   }
   #section1 .first-sec-container .fp-img3 .fp3-container {
@@ -685,7 +638,7 @@ nav .container-fluid img {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     text-align: center;
   }
   #section1 .first-sec-container .fp-img3 .fp3-container:hover .overlay3 {
@@ -699,18 +652,12 @@ nav .container-fluid img {
     /*höjden på boxen justeras efter innehållet*/
     position: relative;
     -webkit-transform: translate(13%, 25%);
-    transform: translate(13%, 25%);
+            transform: translate(13%, 25%);
     /*13% på X-axeln för att boxen ska ligga i kant med skärmens högersida*/
   }
   #section1 .first-sec-container .first-page-box .box {
     text-align: left;
-    background-image: -webkit-gradient(
-      linear,
-      right top,
-      left top,
-      from(#ffffff),
-      to(#fff3e4)
-    );
+    background-image: -webkit-gradient(linear, right top, left top, from(#ffffff), to(#fff3e4));
     background-image: linear-gradient(to left, #ffffff, #fff3e4);
     /*fadear boxen för att den ska smälta in i bakgrunden*/
     border-radius: 1em 0 0 1em;
@@ -720,7 +667,7 @@ nav .container-fluid img {
     font-size: 0.9em;
   }
   #section1 h1,
-  #section1 p {
+#section1 p {
     color: #654a4a;
   }
   #section1 h5 {
@@ -746,21 +693,21 @@ nav .container-fluid img {
   #section2 .container .p-5.row div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     text-align: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #section2 .container .p-5.row div:first-child button {
     margin-bottom: 0;
@@ -772,23 +719,17 @@ nav .container-fluid img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   /*******SECTION 3 START********/
   #section3 {
     padding: 2em 0 10% 0;
     /*avståndet från textboxen till topp och botten på sektionen*/
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#eed6c4),
-      to(#eed6c4)
-    );
+    background: -webkit-gradient(linear, left top, left bottom, from(#eed6c4), to(#eed6c4));
     background: linear-gradient(#eed6c4, #eed6c4);
     /*För att bilden inte ska försvinna för mycket från section 4*/
   }
@@ -816,7 +757,7 @@ nav .container-fluid img {
     position: absolute;
     /*position absloute för att kunna placera bilden över två sektioner*/
     width: 40%;
-    max-width: 63vh;
+    max-width: 75vh;
     /*för att bilden inte ska gå för långt ner över section4*/
     margin-left: 2em;
   }
@@ -858,10 +799,14 @@ nav .container-fluid img {
   #section1 .first-sec-container .first-page-box {
     /*för att avståndet från toppen inte ska bli för tight*/
     -webkit-transform: translate(13%, 40%);
-    transform: translate(13%, 40%);
+            transform: translate(13%, 40%);
   }
   #section1 .first-sec-container .first-page-box .box .contentbox {
     width: 80%;
+  }
+
+  #section2 h1 {
+    font-size: 4em;
   }
 
   #section4 form {
@@ -874,7 +819,7 @@ nav .container-fluid img {
   /*för att avstndet från toppen inte ska bli för tight*/
   #section1 .first-sec-container .first-page-box {
     -webkit-transform: translate(13%, 55%);
-    transform: translate(13%, 55%);
+            transform: translate(13%, 55%);
   }
   #section1 .first-sec-container .first-page-box .box .contentbox {
     width: 70%;

@@ -197,6 +197,9 @@ nav {
     p {
       color: dimgrey;
     }
+    .gold-color {
+      color: $goldcolor;
+    }
   }
 }
 /********SECTION 3 START********/
@@ -658,7 +661,7 @@ nav {
         img {
           position: absolute; /*position absloute för att kunna placera bilden över två sektioner*/
           width: 40%;
-          max-width: 63vh; /*för att bilden inte ska gå för långt ner över section4*/
+          max-width: 75vh; /*för att bilden inte ska gå för långt ner över section4*/
           margin-left: 2em;
         }
       }
@@ -704,6 +707,9 @@ nav {
         width: 80%;
       }
     }
+  }
+  #section2 h1 {
+    font-size: 4em;
   }
   #section4 form {
     /*För att bilden från sektion 3 inte ska "krocka" med formuläret gör jag formuläret till 50%*/
