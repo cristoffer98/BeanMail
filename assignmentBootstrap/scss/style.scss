@@ -155,7 +155,8 @@ nav {
   height: auto;
   width: 100%;
   .btn {
-    background-color: $lightcolor;
+    background-color: $maincolor;
+    color: $lightcolor;
   }
   .btn:hover {
     background-color: $goldcolor;
@@ -290,6 +291,7 @@ nav {
     overflow: hidden;
     z-index: 1;
     &:after {
+      /*Knapp innan hover - detta lager ligger bakom textens lager*/
       content: "";
       position: absolute;
       bottom: 0;
@@ -301,6 +303,7 @@ nav {
       z-index: -2;
     }
     &:before {
+      /*Knapp efter hover - detta lager lägger sig över :after*/
       content: "";
       position: absolute;
       bottom: 0;
@@ -313,6 +316,7 @@ nav {
       z-index: -1;
     }
     &:hover {
+      /*Byter färg på texten vid hover*/
       color: $lightcolor;
       &:before {
         width: 100%;
@@ -329,7 +333,6 @@ nav {
   nav {
     background-color: $lightcolor;
     .container-fluid {
-      flex-direction: column;
       .navbar-nav .nav-item {
         a {
           color: $maincolor;
@@ -361,6 +364,7 @@ nav {
       }
     }
   }
+  /*******SECTION 1*********/
   #section1 {
     background-image: linear-gradient(
         rgba(122, 125, 100, 0),
@@ -369,13 +373,6 @@ nav {
       url(../images/coffeebeans.jpeg);
     .box {
       text-align: center;
-      .btn {
-        color: $lightcolor;
-        background-color: $maincolor;
-      }
-      .btn:hover {
-        background-color: $goldcolor;
-      }
     }
   }
   /********SECTION 2***********/
@@ -385,12 +382,12 @@ nav {
       height: auto;
       .p-5.row {
         div {
-          flex-direction: column;
+          flex-direction: column; /*Lägger divarna i en kolumn istället för på rad*/
           width: 100%;
           text-align: center;
         }
         div:first-child {
-          padding-right: 0;
+          padding-right: 0; /*För att avståndet till bordern ska lägga sig rätt*/
           padding-left: 0;
           padding-bottom: 2em;
         }
@@ -401,18 +398,12 @@ nav {
       }
     }
     .border-right {
+      /*Tar bort bordern på högra sidan för att lägga den under istället*/
       border-right: none;
       border-bottom: 1px solid black;
     }
-
-    .img_sec2 {
-      width: 50%;
-      height: auto;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
   }
+  /*****SECTION 4***********/
   #section4 {
     .footer-col {
       padding: 0 4em;
@@ -430,7 +421,7 @@ nav {
 }
 @media screen and (min-width: 992px) {
   body {
-    padding-top: 60px;
+    padding-top: 60px; /*När loggan läggs på rad med listitems minskar jag paddingen från bodyn till navbaren för att det inte ska vara ett gap*/
   }
   /*******NAV START********/
   nav {
@@ -450,18 +441,19 @@ nav {
   #section1 {
     background-position: center;
     height: 90%;
-    z-index: 1;
     .first-sec-container {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-
       .fp-images {
         width: 35%; /*containerns storlek i förhållande till syskonet first-page-box*
         /*inspiration till kod inom .fp-img1, .fp-img2, .fp-img3, - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade*/
         .fp-img1 {
           width: 40%;
-          transform: translate(200%, 30%);
+          transform: translate(
+            200%,
+            30%
+          ); /*Justerar position för de runda bilderna*/
           .fp1-container {
             position: relative;
             img {
@@ -470,6 +462,7 @@ nav {
               display: block;
             }
             .overlay1 {
+              /*Lager som visas när man hovrar över bilden - opacity är 0 och blir 1 när man hovrar.*/
               position: absolute;
               top: 0;
               bottom: 0;
@@ -482,6 +475,7 @@ nav {
               transition: 0.2s ease;
               background-color: $maincolor;
               h5 {
+                /*Centrerar h5*/
                 color: $lightcolor;
                 position: absolute;
                 top: 50%;
@@ -492,6 +486,7 @@ nav {
             }
           }
           .fp1-container:hover .overlay1 {
+            /*Vid hover så sätter jag overlay1's opacity till 1 -dvs visar fältet*/
             opacity: 1;
           }
         }
@@ -573,12 +568,12 @@ nav {
       }
       .first-page-box {
         width: 60%;
-        height: fit-content;
+        height: fit-content; /*höjden på boxen justeras efter innehållet*/
         position: relative;
         transform: translate(
           13%,
           25%
-        ); /*13% på Xaxeln för att boxen ska ligga i kant med skärmens högersida*/
+        ); /*13% på X-axeln för att boxen ska ligga i kant med skärmens högersida*/
         .box {
           text-align: left;
           background-image: linear-gradient(
@@ -619,19 +614,21 @@ nav {
         width: 100%;
         text-align: center;
         justify-content: center;
-      }
-      .p-5.row div:last-child {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
       }
       .p-5.row div:first-child {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
         button {
           margin-bottom: 0;
         }
+      }
+      .img_sec2 {
+        width: 50%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
       }
     }
   }
@@ -641,7 +638,7 @@ nav {
     h5 {
       color: $goldcolor;
     }
-    padding: 2em 0 10% 0;
+    padding: 2em 0 10% 0; /*avståndet från textboxen till topp och botten på sektionen*/
     background: linear-gradient($darkbeige, $darkbeige);
     .cont {
       display: flex;
@@ -656,12 +653,12 @@ nav {
     /*För att bilden inte ska försvinna för mycket från section 4*/
     #s3-imgdiv {
       div {
-        display: block;
+        display: block; /*display block för att visa bilden*/
         width: 100%;
         img {
-          position: absolute;
+          position: absolute; /*position absloute för att kunna placera bilden över två sektioner*/
           width: 40%;
-          max-width: 63vh; //för att bilden inte ska gå för långt ner över section4
+          max-width: 63vh; /*för att bilden inte ska gå för långt ner över section4*/
           margin-left: 2em;
         }
       }
@@ -701,27 +698,24 @@ nav {
 @media screen and (min-width: 1100px) {
   #section1 .first-sec-container {
     .first-page-box {
-      transform: translate(
-        13%,
-        40%
-      ); //för att avstndet från toppen inte ska bli för tight
+      /*för att avståndet från toppen inte ska bli för tight*/
+      transform: translate(13%, 40%);
       .box .contentbox {
         width: 80%;
       }
     }
   }
   #section4 form {
+    /*För att bilden från sektion 3 inte ska "krocka" med formuläret gör jag formuläret till 50%*/
     width: 50%;
     text-align: left;
   }
 }
 @media screen and (min-width: 1300px) {
+  /*för att avstndet från toppen inte ska bli för tight*/
   #section1 .first-sec-container {
     .first-page-box {
-      transform: translate(
-        13%,
-        55%
-      ); //för att avstndet från toppen inte ska bli för tight
+      transform: translate(13%, 55%);
       .box .contentbox {
         width: 70%;
       }
