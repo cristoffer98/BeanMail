@@ -481,6 +481,8 @@ nav .container-fluid .navbar-nav .nav-item a:active {
   body {
     padding-top: 60px;
     /*När loggan läggs på rad med listitems minskar jag paddingen från bodyn till navbaren för att det inte ska vara ett gap*/
+    overflow-x: hidden;
+    /*För att bootstraps navbar är för lång i relation med body.*/
   }
 
   /*******NAV START********/
@@ -489,6 +491,7 @@ nav .container-fluid .navbar-nav .nav-item a:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    max-width: 1200px;
     margin: 0 auto;
   }
   nav .container-fluid .nav-item {
