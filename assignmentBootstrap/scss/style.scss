@@ -659,10 +659,10 @@ nav {
     #s3-imgdiv {
       div {
         display: block; /*display block för att visa bilden*/
-        width: 80%; 
+        width: 100%; 
         img {
           position: absolute; /*position absloute för att kunna placera bilden över två sektioner*/
-          width: 40%;
+          width: 35%;
           margin-left: 2em;
         }
       }
@@ -709,11 +709,6 @@ nav {
       }
     }
   }
-  #section4 form {
-    /*För att bilden från sektion 3 inte ska "krocka" med formuläret gör jag formuläret till 50%*/
-    width: 50%;
-    text-align: left;
-  }
 }
 @media screen and (min-width: 1300px) {
   /*för att avstndet från toppen inte ska bli för tight*/
@@ -724,5 +719,10 @@ nav {
         width: 70%;
       }
     }
+  }
+  #section4 form {
+    /*För att bilden från sektion 3 inte ska "krocka" med formuläret gör jag formuläret till 50%*/
+    width: 50%;
+    text-align: left;
   }
 }
